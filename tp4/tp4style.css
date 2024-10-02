@@ -1,0 +1,39 @@
+.block1{
+    background-color: blueviolet;
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+body{
+    background-color: aqua;
+
+}
+.block2{
+    margin-left: 20px;
+    height: 200px;
+    width: 15px;
+
+    background-color: greenyellow;
+    float: right;
+
+}
+
+.block3{
+    margin-left: 20px;
+    height: 180px;
+    width: 150px;
+
+    background-color: orange;
+clear: both;
+}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+    }
+}
