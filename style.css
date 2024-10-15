@@ -4,67 +4,143 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+ 
+nav{
+    width: 100%;
+    background-color: #424558;
+}
+
 nav>ul{
    margin: 0;
    padding: 0;
    display:inline-block ;   
 }
+nav li{
+    list-style-type: none;
 
-ul{
-    list-style: none;
+}
+nav>ul>li{
+    float: left;
+    position: relative;
+
+}
+nav>ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.tp{
     display: none;
-    }
-
-
-.bdd:hover .tp{
-    display: block;
-    
-    
 
 }
-.PHP:hover .tp{
-    display: block;
-
-}
-.bdd:hover .tp{
-    display: block;
-
-}
-.java:hover .tp{
-    display: block;
-
-}
-.hc:hover .tp{
-    display: block;
-
-}
-.mission:hover .tp{
-    display: block;
-}
-.certification:hover .tp{
-    display: block;
-
-}
-
-
-.menu input{
+nav input[type=checkbox]{
     display: none;
 }
-.menu p{
+nav label{
     display: none;
 }
-nav{
-    background-color: blueviolet;
-    
-}
-a{
+nav a{
+    display: inline-block;
     text-decoration: none;
-    color: white;
-    margin: 50px;
 }
-nav>ul>ul{
+nav>ul>li>a{
+    padding: 20px 30px;
+    color: white;
+}
+nav>ul>li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+.tp li{
+    border-bottom: 1px solid #CCC;
+}
+nav li:hover .tp{
+    display: inline-block;
     position: absolute;
-    border-top: 5px solid purple;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000;
+}
+.tp li a{
+    padding: 15px 30px;
+    font-size: 13px;
+    color: black;
+    width: 270px;
+}
+.hc:hover{
+    border-top: 5px solid #8e44ad;
     background-color: rgba(228, 77, 38, 0.15);
 }
+.java:hover{
+    border-top: 5px solid #3498db;
+    background-color: rgba(228, 77, 38, 0.15);
 
+}
+.bdd:hover{
+    border-top: 5px solid #27ae60;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+.php:hover{
+    border-top: 5px solid #f1c40f;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+.mission:hover{
+    border-top: 5px solid #ecf0f1 ;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+.Certification:hover{
+    border-top: 5px solid #FF00FF;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+.hc .tp{
+    background-color: #8e44ad;
+}
+.java .tp{
+    background-color: #3498db;
+}
+.bdd .tp{
+    background-color: #27ae60;
+}
+.php .tp{
+    background-color: #f1c40f;
+}
+
+.mission .tp{
+    background-color:#ecf0f1 ;
+}
+.Certification .tp{
+    background-color:#FF00FF ;
+}
+.tp li:hover a{
+    color: EEE;
+    font-weight: bold;
+}
+nav input[type=checkbox]:checked ~ ul{
+    display: block;
+}
+
+@media screen and (max-width: 780px){
+    .menu-mobile{
+        display: block;
+        color:#fff;
+        background-color: aqua;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    nav ul{
+        display: none;
+    }
+    nav ul li, nav ul li a{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a, nav ul li:hover a{
+        padding: 10px 0px;
+    }
+    nav li:hover .tp{
+        display: block;
+        position: static;
+    }
+}
+    
