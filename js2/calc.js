@@ -41,3 +41,6 @@ function parite(){
     else
     t4.value = "Impair"
 }
+function accueil(){
+    document.location.href="../index.html";
+}
