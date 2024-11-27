@@ -69,3 +69,7 @@ function seconnecter3(){
         cell2.innerHTML=document.getElementById("t2").value;
     }
  }
+
+function accueil(){
+    document.location.href="../index.html";
+}

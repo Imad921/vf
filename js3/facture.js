@@ -18,3 +18,16 @@ function Calcul(){
     var c = Number(c1)+Number(c2)+Number(c3);
     totalResult.value = c;
 }
+function Reset() {
+    prix1.value = ""; quantité1.value = "";
+    prix2.value = ""; quantité2.value = "";
+    prix3.value = ""; quantité3.value = "";
+    result1.value = "";
+    result2.value = "";
+    result3.value = "";
+    totalResult.value = "";
+}
+
+function accueil(){
+    document.location.href="../index.html";
+}
