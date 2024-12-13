@@ -1,4 +1,39 @@
+body{
+    background-image: url(imgpoint.jpg);
+}
 nav{
     color:blue;
     font-family: Verdana;
+}
+main{
+    color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 780px){
+    .menu-mobile{
+        display: block;
+        color:#fff;
+        background-color: aqua;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    nav ul{
+        display: none;
+    }
+    nav ul li, nav ul li a{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a, nav ul li:hover a{
+        padding: 10px 0px;
+    }
+    nav li:hover .tp{
+        display: block;
+        position: static;
+    }
 }
