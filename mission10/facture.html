@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="facture.js"></script>
+    <link rel="stylesheet" href="facture.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+<header>
+ <div class="company-info">
+ <input type="text" placeholder="Nom de la compagnie"> <br>
+<input type="text" placeholder="Adresse postale"> <br>
+<input type="text" placeholder="Détails du contact">
+</div>
+<div class="invoice-info">
+<h2>FACTURE</h2>
+<input type="date">
+
+            </div>
+        </header>
+                <hr>
+        <section class="client-info">
+            <div class="destinataire">
+                <h3>Destinataire</h3> <br>
+                <input type="text" placeholder="Nom"> <br>
+                <input type="text" placeholder="Nom de la société"> <br>
+                <input type="text" placeholder="Adresse postale"> <br>
+                <input type="number" placeholder="Téléphone"> <br>
+                <input type="text" placeholder="Email"> <br>
+            </div>
+            <div class="envoyer-a">
+                <h3>Envoyer à</h3>
+                <input type="text" placeholder="Nom"> <br>
+                <input type="text" placeholder="Nom de la société"> <br>
+                <input type="text" placeholder="Adresse postale"> <br>
+                <input type="number" placeholder="Téléphone"> <br>
+                <input type="text" placeholder="Email"> <br>
+            </div>
+
+        </section>
+        <section class="table-section">
+            <table id="factureTable">
+                <thead>
+                    <tr>
+                        <th>DESCRIPTION</th>
+                        <th>QUANTITÉ</th>
+                        <th>PRIX UNITAIRE (€)</th>
+                        <th>TOTAL (€)</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+
+                        <td><input type="text" value="desc1"></td>
+                        <td><input type="number" class="quantite" value="1"></td>
+                        <td><input type="number" class="prixUnitaire" value="12"></td>
+                        <td class="total">12.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="text" value="desc2"></td>
+                        <td><input type="number" class="quantite" value="0"></td>
+                        <td><input type="number" class="prixUnitaire" value="0"></td>
+                        <td class="total">0.00</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <textarea rows="3" placeholder="Remarques, notes et instructions de paiement"></textarea>
+        </section>
+        <section class="totaux">
+            <div class="calculations">
+                <p>SOUS-TOTAL : <span id="sousTotal">144.00</span> €</p>
+                <p>REMISE : <span id="remise">10%</span></p>
+                <p>SOUS-TOTAL MOINS LES REMISES : <span id="moinsRemise">131.76</span> €</p>
+                <p>TAUX D'IMPOSITION : <span id="taxe">10.00%</span></p>
+                <p>TAXE TOTALE : <span id="taxeTotale">14.40</span> €</p>
+                <p>EXPÉDITION, MANUTENTION : <span id="expedition">5.00</span> €</p>
+                <h3>SOLDE DÛ : <span id="soldeFinal">149.00</span> €</h3>
+
+            </div>
+
+        </section>
+        <div class="actions">
+            <button id="calculer">Calculer</button>
+            <button id="ajouterLigne">Ajouter une ligne</button>
+            <button id="remplirAuto">Remplir automatiquement</button>
+            <button id="annuler">Annuler</button>
+        </div>
+    </div>
+<center><button onclick="accueil()">Accueil</button></center>
+
+</body>
+</html>
